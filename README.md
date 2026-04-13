@@ -1,2 +1,72 @@
-# pre-entrega-automation-testing-cecilia-urrutia
-El objetivo de este proyecto es queaplicar los conocimientos adquiridos hasta la Clase 8 del curso, automatizando flujos básicos de navegación web utilizando Selenium WebDriver y Python. 
+# Automatización de Pruebas con Python
+## Propósito del Proyecto
+
+Este proyecto tiene como objetivo automatizar pruebas funcionales de una aplicación web utilizando herramientas de testing en Python.
+
+Se busca validar el correcto funcionamiento de distintas funcionalidades mediante pruebas automatizadas, mejorando la calidad del software y reduciendo el esfuerzo manual.
+
+---
+
+## Tecnologías Utilizadas
+
+- Python → Lenguaje principal de desarrollo  
+- Pytest → Framework de testing  
+- Selenium WebDriver → Automatización de navegadores  
+- pytest-html → Generación de reportes en HTML  
+
+---
+
+## ⚙️ Instalación de Dependencias
+
+### 1. Clonar el repositorio
+    git clone <URL_DEL_REPOSITORIO>
+    cd <NOMBRE_DEL_PROYECTO>
+
+### 2. Crear entorno virtual (opcional pero recomendado)
+    python -m venv venv
+
+### 3. Activar entorno virtual
+
+En Windows:
+    venv\Scripts\activate
+
+En Linux/Mac:
+    source venv/bin/activate
+
+### 4. Instalar dependencias
+    pip install -r requirements.txt
+
+---
+
+
+## Ejecución de Pruebas
+
+Ejecutar las pruebas con:
+    pytest tests/test_saucedemo.py -v
+
+---
+
+## Generación de Reportes
+
+Generar reporte HTML con:
+    pytest pre-entrega-final/test_saucedemo.py -v --html=reporte.html
+
+El archivo generado será:
+    /reports/report.html
+
+Abrirlo en un navegador para ver el detalle de ejecución.
+
+---
+
+## Estructura del Proyecto
+
+    ├── tests/
+    │   └── test_saucedemo.py
+    ├── requirements.txt
+    ├── README.md
+    ├── .gitignore
+    ├── utils
+    └── reports
+        └── report.html
+    ├── data
+
