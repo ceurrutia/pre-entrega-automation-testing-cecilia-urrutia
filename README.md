@@ -19,11 +19,10 @@ Se busca validar el correcto funcionamiento de distintas funcionalidades mediant
 ## ⚙️ Instalación de Dependencias
 
 ### 1. Clonar el repositorio
-    git clone <URL_DEL_REPOSITORIO>
-    cd <NOMBRE_DEL_PROYECTO>
+    git clone https://github.com/ceurrutia/pre-entrega-automation-testing-cecilia-urrutia.git
 
 ### 2. Crear entorno virtual (opcional pero recomendado)
-    python -m venv venv
+    python -m venv env
 
 ### 3. Activar entorno virtual
 
@@ -49,7 +48,7 @@ Ejecutar las pruebas con:
 ## Generación de Reportes
 
 Generar reporte HTML con:
-    pytest pre-entrega-final/test_saucedemo.py -v --html=reporte.html
+    pytest pre-entrega-final/tests/test_saucedemo.py -v --html=reporte.html
 
 El archivo generado será:
     /reports/report.html
