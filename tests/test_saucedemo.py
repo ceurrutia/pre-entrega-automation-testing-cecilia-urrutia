@@ -1,25 +1,22 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-def test_prueba():
+from tests.commons.funciones_commons import login, logout
+
+def test_title():
     driver = webdriver.Chrome()
     driver.get("https://www.saucedemo.com/")
     assert "Swag Labs" in driver.title
     
-    driver.quit()
     
-def test_login():
-    driver = webdriver.Chrome()
+def test_login(driver):
     driver.get("https://www.saucedemo.com/")
-    
-    username_input = driver.find_element(By.ID, "user-name")
-    password_input = driver.find_element(By.ID, "password")
-    login_button = driver.find_element(By.ID, "login-button")
-
-    username_input.send_keys("standard_user")
-    password_input.send_keys("secret_sauce")
-    login_button.click()
-    
+    login(driver)
     assert "inventory" in driver.current_url
-    
-    driver.quit()   
+
+def test_logout(driver):
+    driver.get("https://www.saucedemo.com/")
+    login(driver)
+    logout(driver)
