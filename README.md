@@ -60,18 +60,30 @@ Abrirlo en un navegador para ver el detalle de ejecución.
 ## Estructura del Proyecto
 
     project/
+
 ├── conftest.py
+
 ├── requirements.txt
+
 ├── README.md
+
 ├── .gitignore
+
 │
-├── tests/
+├── tests/\
+
 │   ├── test_saucedemo.py
+
 │   └── commons/
+
 │       ├── __init__.py
+
 │       └── funciones_commons.py
 │
 ├── utils/
+
 ├── data/
+
 ├── reports/
+
 │   └── report.html
