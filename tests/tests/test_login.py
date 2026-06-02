@@ -4,6 +4,7 @@ from utils.helpers import load_user_csv #, load_user_json
 from data.users import USERS    
 from faker import Faker
 
+#ver librerias usar pip show
 ##data driven test
 load_csv = load_user_csv("data/users.csv")
 # load_json = load_user_json("data/users.json")
