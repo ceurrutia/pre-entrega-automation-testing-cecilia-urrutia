@@ -46,17 +46,16 @@ El requirements.txt instalará la dependencia
 2. Crear un archivo .env en la raíz del proyecto, donde escribirá su APIKEY y datos de Login
 Ejemplo
 
-´´´
+
 X_API_KEY=su_key
+
 EMAIL_USER=su_usuario@reqres.in
+
 PASSWORD_USER=su_pass
 
-´´´
-3. LLamarlo desde su test con 
 
-´´´
-from dotenv import load_dotenv
-´´´
+3. LLamarlo desde su test usando __from dotenv import load_dotenv__
+
 
 ## Ejecución de Pruebas
 
