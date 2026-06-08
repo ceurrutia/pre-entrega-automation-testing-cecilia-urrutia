@@ -20,3 +20,10 @@ def driver():
 
     time.sleep(1) # Para ver el resultado final
     driver.quit()
+    
+@pytest.fixture
+def user_data():
+   return {
+       "name": "morpheus",
+       "job": "lider de la nabucodonosor"
+      }

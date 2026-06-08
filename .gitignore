@@ -9,3 +9,5 @@ pytets_cache/
 .pytest_cache/
 .vscode/        
 *.log
+.env
+
