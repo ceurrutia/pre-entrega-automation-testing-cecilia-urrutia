@@ -16,7 +16,7 @@ Se busca validar el correcto funcionamiento de distintas funcionalidades mediant
 
 ---
 
-## ⚙️ Instalación de Dependencias
+## Instalación de Dependencias
 
 ### 1. Clonar el repositorio
     git clone https://github.com/ceurrutia/pre-entrega-automation-testing-cecilia-urrutia.git
@@ -37,11 +37,30 @@ En Linux/Mac:
 
 ---
 
+### Pruebas de API
+
+Se realizan con 'https://reqres.in/api'
+
+El requirements.txt instalará la dependencia
+
+2. Crear un archivo .env en la raíz del proyecto, donde escribirá su APIKEY y datos de Login
+Ejemplo
+
+
+X_API_KEY=su_key
+
+EMAIL_USER=su_usuario@reqres.in
+
+PASSWORD_USER=su_pass
+
+
+3. LLamarlo desde su test usando __from dotenv import load_dotenv__
+
 
 ## Ejecución de Pruebas
 
 Ejecutar las pruebas con:
-    pytest tests/test_saucedemo.py -v
+    pytest -v
 
 ---
 
