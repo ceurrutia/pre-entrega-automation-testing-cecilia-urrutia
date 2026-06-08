@@ -24,6 +24,7 @@ def get_users():
         print(response.json())
     else:
         print(f"Error: {response.status_code}")
+    return response
 
 
 def apiPost():
@@ -42,3 +43,4 @@ def create_user(name, job):
         print(response.json())
     else:
         print(f"Error: {response.status_code}")
+    return response

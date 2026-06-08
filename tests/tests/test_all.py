@@ -14,5 +14,6 @@ def test_get_user():
 ##creatre
 def test_create_user(user_data):
     response = create_user(user_data["name"], user_data["job"])
-   
-    
+    assert response.status_code == 201
+    assert response.json()["name"] == "morpheus"
+    assert response.json()["job"] == "lider de la nabucodonosor"
