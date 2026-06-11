@@ -1,21 +1,38 @@
-from api.api_clients import create_user, create_user, delete_user, get_all_users, get_users, update_user
+import logging
+import os
+from api.api_clients import create_user, delete_user, get_all_users, get_users, update_user
 from conftest import user_data
+
+
+##logs guardar
+
+log_path = os.path.abspath("logs/test_log.log")
+os.makedirs(os.path.dirname(log_path), exist_ok=True)
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filename=log_path)
+logger = logging.getLogger(__name__)
+logger.info('Ejecución de pruebas iniciada')
+
+
 
 ##obtiene
 
 def test_get_user():
+    logger.info('Iniciando test_get_user')
     response = get_users()
     if response.status_code == 200:
         print(response.json())
+        logger.error('SE HA MOSTRADO UN ERROR EN EL STATUS CODE')
     
     data = response.json()
     assert "data" in data
     assert len(data["data"]) > 0
-
+    logger.info('test_get_user completed successfully')
 
 ##creatre
 
 def test_create_user(user_data):
+    logger.info('Iniciando test_create_user')
     response = create_user(user_data["name"], user_data["job"])
     assert response.status_code == 201
     assert response.json()["name"] == "morpheus"
